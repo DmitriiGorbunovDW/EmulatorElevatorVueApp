@@ -1,0 +1,19 @@
+{
+  "name": "emulator-elevator-vue-app",
+  "version": "1.0.0",
+  "description": "# Before installing dependencies make sure, that you're running npm commands from \"elevator-task\" folder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DmitriiGorbunovDW/EmulatorElevatorVueApp.git"
+  },
+  "author": "Dmitrii Gorbunov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DmitriiGorbunovDW/EmulatorElevatorVueApp/issues"
+  },
+  "homepage": "https://github.com/DmitriiGorbunovDW/EmulatorElevatorVueApp#readme"
+}
