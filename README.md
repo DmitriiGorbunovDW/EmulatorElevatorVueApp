@@ -1,4 +1,4 @@
-# elevator-task
+# Emulator Elevator Vue App
 
 # Before installing dependencies make sure, that you're running npm commands from "elevator-task" folder
 
