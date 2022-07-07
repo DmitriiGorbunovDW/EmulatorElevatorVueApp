@@ -40,3 +40,39 @@ export default {
   }
 };
 </script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Trispace:wght@700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Trispace', sans-serif;
+}
+
+.app {
+  display: flex;
+  border: 2px solid black ;
+  width: 100%;
+  margin: 5px;
+}
+
+.app form {
+  margin-top: 10px;
+}
+
+.app form input {
+  width: 27px;
+  margin-right: 5px;
+}
+
+.app form span {
+  font-size: 12px;
+  color: red;
+}
+
+.home {
+  display: flex;
+  flex-direction: column-reverse;
+}
+</style>
