@@ -1,9 +1,9 @@
 <template>
   <div class="floor">
     <div class="boxElevator"></div>
-    <div class="boxButton"><button :disabled="this.floorNumber === this.currentFloor" @click="callUp" :class='{
-      active: this.isFloorInQueue(this.floorNumber)
-    }'>{{ this.floorNumber }}</button></div>
+    <div class="boxButton">
+      <button :disabled="this.floorNumber === this.currentFloor" @click="callUp" :class='{active: this.isFloorInQueue(this.floorNumber)}'>{{ this.floorNumber }}</button>
+      </div>
   </div>
 </template>
 
@@ -13,9 +13,7 @@ import { mapGetters } from 'vuex';
 export default {
   name: 'Floor',
   props: ['floorNumber'],
-  computed: {
-    ...mapGetters(['isFloorInQueue', 'elevatorStatus', 'currentFloor'])
-  },
+  computed: {...mapGetters(['isFloorInQueue', 'elevatorStatus', 'currentFloor'])},
   methods: {
     callUp() {
       if (!this.isFloorInQueue(this.floorNumber) && this.elevatorStatus === 'ready') {
@@ -45,19 +43,12 @@ export default {
   height: 120px;
 }
 
-.boxButton {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .boxButton > button {
-  height: 30px;
-  width: 30px;
-  font-size: 20px;
+  height: 20px;
+  width: 20px;
+  font-size: 12px;
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 20%;
   border: 1px solid;
   transition: 0.2s ease-in-out;
 }
@@ -80,5 +71,4 @@ export default {
 .animate__animated.animate__flash {
   --animate-duration: 3s;
 }
-
 </style>
