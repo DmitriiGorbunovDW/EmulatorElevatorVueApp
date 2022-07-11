@@ -1,6 +1,12 @@
 <template>
-	<div ref="elevator" @animationcancel="endOfMove" class="elevator animate__animated"
-		:class="{ animate__flash: this.elevatorStatus === 'onFloor' }">
+	<div ref="elevator" @animationcancel="endOfMove" class="elevator animate__animated" :class="{ animate__flash: this.elevatorStatus === 'onFloor' }">
+		<div v-if="this.firstInQueue" class="screen">
+			<p>{{ this.currentFloor }}</p>
+			<p class="arrow"><strong v-if="this.getDirection === 'up'">&#8593;</strong></p>
+			<p class="arrow"><strong v-if="this.getDirection === 'down'">&#8595;</strong></p>
+		</div>
+	</div>
+	<div ref="elevator" @animationcancel="endOfMove" class="elevator animate__animated" :class="{ animate__flash: this.elevatorStatus === 'onFloor' }">
 		<div v-if="this.firstInQueue" class="screen">
 			<p>{{ this.currentFloor }}</p>
 			<p class="arrow"><strong v-if="this.getDirection === 'up'">&#8593;</strong></p>
